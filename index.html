@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TRINITY HOME SUBMISSION DUE DATES</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600;700&family=Caveat:wght@700&display=swap">
+<style>
+:root{color-scheme:light;--bg:#f7f6f3;--surface:#fff;--strip:#ece9e5;--ink:#26221f;--dim:#666059;--line:#dcd6cf;--lstrong:#b9b1a8;--nav:#a80f14;--head:#a80f14;--brand:#a80f14;--gold:#dea31c;--closed:#efece8;--closed-line:#e0d9d1;--c-phy:#2b6f77;--c-che:#557a26;--c-hw:#9a6212;--badge-ink:#fff;--serif:"Source Serif 4",Georgia,"Times New Roman",serif;--sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+:root[data-theme="dark"]{--bg:#171413;--surface:#211d1b;--strip:#2a2522;--ink:#f0eae4;--dim:#b2a89f;--line:#3a3330;--lstrong:#5a504a;--nav:#7c0e12;--head:#e5757a;--brand:#b8171d;--gold:#e3b23c;--closed:#292421;--closed-line:#3a332e;--c-phy:#63b5bf;--c-che:#9cc45f;--c-hw:#e2a54a;--badge-ink:#1a1512}
+*{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--sans)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+.topbar{background:var(--nav);border-bottom:4px solid var(--gold)}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;gap:8px 20px;flex-wrap:wrap;min-height:56px;padding-top:8px;padding-bottom:8px}
+.brand{font:700 18px var(--serif);color:#fff}
+.topnav{display:flex;gap:20px}
+.topnav a{color:#fff;text-decoration:none;font-weight:600;font-size:15px;border-bottom:2px solid transparent;padding:4px 0}
+.topnav a:hover{border-color:var(--gold)}
+.strip{background:var(--strip);border-bottom:1px solid var(--line);font-size:14px;color:var(--dim)}
+.strip .container{display:flex;flex-wrap:wrap;gap:4px 22px;padding-top:10px;padding-bottom:10px}
+.strip b{color:var(--ink);font-weight:600}
+.hero{padding:38px 0 22px}
+h1{font:700 clamp(27px,5vw,42px)/1.12 var(--serif);color:var(--head);margin:0}
+.rule{width:64px;height:4px;background:var(--gold);margin:16px 0}
+.hero p{max-width:62ch;color:var(--dim);margin:0}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:22px}
+.btn{font:600 15px var(--sans);border-radius:4px;padding:10px 18px;min-height:44px;cursor:pointer;border:1.5px solid var(--brand)}
+.btn-p{background:var(--brand);color:#fff}
+.btn-s{background:transparent;color:var(--head)}
+.pick{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--dim)}
+.status{margin-top:14px;font-weight:600}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:24px;margin-bottom:24px}
+h2{font:700 24px var(--serif);color:var(--head);margin:0 0 4px}
+h3{font:700 21px var(--serif);margin:0}
+.sub{color:var(--dim);font-size:14.5px;margin:0 0 16px}
+.meta{color:var(--dim);font-size:14px}
+select,input,textarea{font:16px var(--sans);color:var(--ink);background:var(--surface);border:1px solid var(--lstrong);border-radius:4px;padding:9px 12px;min-height:44px;color-scheme:light}
+textarea{width:100%}
+.selrow{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.selrow label{font-weight:600}
+.empty{color:var(--dim);margin:12px 0 0}
+.due{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;padding:14px 12px;border-top:1px solid var(--line);border-left:5px solid transparent;cursor:pointer}
+.due:hover .tt{text-decoration:underline}
+.due.late,.mi.late{background:#fdecea;border-left-color:#d4574f}
+.due.done,.mi.done{background:#eaf5ec;border-left-color:#5fa86d}
+.due.tmr,.mi.tmr{background:#fff7d1;border-left-color:#e6c200}
+.st-late{color:#b3372f;font-weight:600}.st-done{color:#2f7a3f;font-weight:600}
+.tt{font-weight:600}
+.tag{background:var(--gold);color:#26221f;font-size:11.5px;font-weight:700;border-radius:3px;padding:1px 7px;margin-left:8px}
+.rt{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--dim);text-align:right}
+.fade-up{-webkit-mask-image:linear-gradient(to top,#000 86%,transparent);mask-image:linear-gradient(to top,#000 86%,transparent)}
+.fade-dn{-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent);mask-image:linear-gradient(to bottom,#000 86%,transparent)}
+.morerow{display:flex;justify-content:center;align-items:center;gap:18px;padding:2px 0}
+.edge-hint{color:var(--lstrong);font-size:12px;line-height:1}
+.today-box{display:flex;align-items:center;gap:12px;margin:10px 0;padding:10px 12px;background:var(--surface);border:1px solid var(--gold);border-left:4px solid var(--gold);border-radius:4px}
+.today-box strong{color:var(--head);font:700 15px var(--serif);white-space:nowrap}
+.today-box span{color:var(--dim);font-size:14px}
+.more{background:none;border:0;padding:10px 6px;min-height:44px;font:14px var(--sans);color:var(--dim);opacity:.75;text-decoration:underline;cursor:pointer}
+.more:hover{opacity:1}
+.x{background:none;border:0;color:var(--dim);font-size:22px;line-height:1;cursor:pointer;padding:6px 10px;min-height:44px}
+.x:hover{color:var(--brand)}
+.badge{width:44px;height:44px;border-radius:4px;display:grid;place-items:center;background:var(--cc);color:var(--badge-ink);font:700 11px var(--sans);letter-spacing:.03em}
+.calwrap{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:28px}
+.calhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.calnav{display:flex;align-items:center;gap:10px}
+.nb{width:44px;height:44px;border:1px solid var(--lstrong);background:var(--surface);color:var(--ink);border-radius:4px;font-size:20px;cursor:pointer}
+.nb:disabled{opacity:.35;cursor:default}
+.seg{display:flex;border:1.5px solid var(--brand);border-radius:4px;overflow:hidden}
+.seg button{font:600 15px var(--sans);border:0;background:transparent;color:var(--head);padding:10px 18px;min-height:44px;cursor:pointer}
+.seg button.on{background:var(--brand);color:#fff}
+.filters{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 14px;padding:12px 14px;background:var(--bg);border:1px solid var(--line);border-radius:4px}
+.filters label{display:flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;cursor:pointer}
+.filters input{accent-color:var(--cc);width:18px;height:18px;min-height:0;margin:0}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.wd{text-align:center;font-size:12.5px;font-weight:700;color:var(--dim);padding:4px 0}
+.day{position:relative;min-height:66px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);padding:6px;text-align:left;cursor:pointer;display:flex;flex-direction:column;font-family:var(--sans)}
+.day:hover{border-color:var(--brand)}
+.day.closed{background:repeating-linear-gradient(135deg,transparent 0 6px,var(--closed-line) 6px 7px),var(--closed)}
+.day.today{background:var(--brand);border-color:var(--brand);color:#fff}
+.day.today .s{color:#ffd9d6}.day.today em{color:#fff}
+.day.today .dots i{box-shadow:0 0 0 1.5px #fff}
+.day.tmr{background:#fff7d1;border-color:#e6c200}
+.day .n{font-weight:700;font-size:16px}
+.day .s{position:absolute;top:6px;right:7px;font-size:11px;color:var(--dim)}
+.dots{margin-top:auto;display:flex;gap:3px;flex-wrap:wrap;align-items:center}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--cc)}
+.dots i.dn{opacity:.35}
+.dots em{font-size:11px;font-style:normal;color:var(--dim)}
+.conv{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:18px;align-self:start}
+.conv input{width:100%;margin:10px 0}
+.big{font:700 24px var(--serif);color:var(--head);margin-top:12px}
+.ov{position:fixed;inset:0;background:rgba(25,18,14,.55);display:none;align-items:center;justify-content:center;padding:18px;z-index:50}
+.ov.open{display:flex}
+.modal{position:relative;background:var(--surface);border-radius:6px;border-top:5px solid var(--brand);max-width:480px;width:100%;max-height:86vh;overflow:auto;padding:24px}
+.modal .cx{position:absolute;top:8px;right:8px}
+.mi{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;padding:14px 10px;border-top:1px solid var(--line);border-left:5px solid transparent;align-items:start}
+.mi p{margin:6px 0 0;font-size:14.5px}
+.empty-day{font-weight:700;text-align:center;padding:8px 0 4px}
+.empty-day .empty-main{font-size:24px;color:var(--head)}
+.empty-day .empty-note,.empty-day .empty-signoff{font-size:18px;color:var(--ink)}
+.note{background:var(--closed);border-left:4px solid var(--gold);padding:8px 12px;font-weight:600;margin:0 0 8px;font-size:14.5px}
+.cbtn{font:600 13.5px var(--sans);border:1.5px solid #5fa86d;color:#2f7a3f;background:#fff;border-radius:4px;padding:8px 12px;min-height:40px;cursor:pointer;white-space:nowrap}
+.cbtn.on{background:#5fa86d;color:#fff}
+.egg{grid-column:1/-1;margin:8px 0 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap;transform:rotate(-1deg);background:#fffdf6;border:2px dashed #c9302c;padding:8px 14px;font:700 22px/1.15 "Caveat","Comic Sans MS",cursive;color:#1d1d1d;cursor:pointer;user-select:none}
+.egg b{color:#c9302c;display:inline-block;border:2.5px solid #c9302c;border-radius:52% 48% 55% 45%/60% 50% 50% 40%;padding:0 10px;animation:jit .3s infinite}
+.egg .fl{display:inline-block;animation:flick .45s infinite alternate}
+@keyframes jit{0%{transform:rotate(2deg) translate(0,0)}25%{transform:rotate(1deg) translate(1px,-1px)}50%{transform:rotate(3deg) translate(-1px,1px)}75%{transform:rotate(1.5deg) translate(1px,1px)}100%{transform:rotate(2deg) translate(0,0)}}
+@keyframes flick{from{transform:scale(1) rotate(-8deg)}to{transform:scale(1.3) rotate(8deg)}}
+.rain{position:fixed;top:-50px;pointer-events:none;z-index:99;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(115vh) rotate(420deg)}}
+body.shake{animation:shk .45s}
+@keyframes shk{0%,100%{transform:translate(0,0)}20%{transform:translate(-7px,3px)}40%{transform:translate(6px,-4px)}60%{transform:translate(-5px,-3px)}80%{transform:translate(4px,4px)}}
+@media (prefers-reduced-motion:reduce){.egg b,.egg .fl{animation:none}}
+.site-foot{margin-top:40px;background:var(--nav);border-top:4px solid var(--gold);color:#fff;text-align:center;padding:18px 20px;font:600 16px var(--serif)}
+@media (max-width:860px){.calwrap{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){
+.container{padding:0 14px}.panel{padding:16px}.hero{padding-top:26px}
+.day{min-height:56px;padding:4px}.day .n{font-size:14px}.day .s{font-size:10px;top:4px;right:4px}
+.due{grid-template-columns:44px minmax(0,1fr)}.rt{grid-column:2;justify-content:space-between}
+.selrow select{width:100%}.topnav{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="container">
+  <span class="brand">Trinity Home · Grade XI-MC1</span>
+  <nav class="topnav"><a href="#duelist">Due dates</a><a href="#calendar">Calendar</a><a href="#converter">Converter</a></nav>
+</div></header>
+<div class="strip"><div class="container" id="strip"></div></div>
+
+<main class="container">
+  <section class="hero">
+    <h1>TRINITY HOME SUBMISSION DUE DATES</h1>
+    <div class="rule"></div>
+    <div class="actions">
+      <button class="btn btn-p" id="tomorrow">Bholi kei xa??</button>
+      <label class="pick">Specific date <input type="date" id="pick"></label>
+    </div>
+    <div class="status" id="status"></div>
+  </section>
+
+  <section class="panel" id="duelist">
+    <h2>Due dates by category</h2>
+    <div class="selrow"><label for="cat">Category</label><select id="cat"></select><button class="btn btn-s" id="hist">Completion history</button></div>
+    <div id="list"></div>
+  </section>
+
+  <section class="panel" id="calendar">
+    <div class="calwrap">
+      <div>
+        <div class="calhead">
+          <div class="calnav">
+            <button class="nb" id="prev" aria-label="Previous month">‹</button>
+            <div><h3 id="ctitle"></h3><div class="meta" id="csub"></div></div>
+            <button class="nb" id="next" aria-label="Next month">›</button>
+          </div>
+          <div class="seg" role="group" aria-label="Calendar system"><button data-m="AD" class="on">AD</button><button data-m="BS">BS</button></div>
+        </div>
+        <div class="filters" id="filters"></div>
+        <div class="grid" id="grid"></div>
+      </div>
+      <aside class="conv" id="converter">
+        <h2 style="font-size:20px">AD to BS converter</h2>
+        <input type="date" id="cIn" aria-label="AD date">
+        <div id="cOut"></div>
+        <p class="meta" style="margin-top:14px">Supported range: 14 Apr 2017 to 13 Apr 2034 (AD).</p>
+      </aside>
+    </div>
+  </section>
+
+  </main>
+<footer class="site-foot">Made with love by MC1</footer>
+
+<div class="ov" id="ovDay"><div class="modal"><button class="x cx" data-close aria-label="Close">×</button><div id="dayBody"></div></div></div>
+
+<script>
+//#DATA-START
+const MONS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const MFULL=['January','February','March','April','May','June','July','August','September','October','November','December'];
+const DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const BSM=['Baisakh','Jestha','Asar','Shrawan','Bhadra','Ashwin','Kartik','Mangsir','Poush','Magh','Falgun','Chaitra'];
+const BST={
+2074:[31,31,31,32,31,31,30,29,30,29,30,30],2075:[31,31,32,31,31,31,30,29,30,29,30,30],
+2076:[31,32,31,32,31,30,30,30,29,29,30,30],2077:[31,32,31,32,31,30,30,30,29,30,29,31],
+2078:[31,31,31,32,31,31,30,29,30,29,30,30],2079:[31,31,32,31,31,31,30,29,30,29,30,30],
+2080:[31,32,31,32,31,30,30,30,29,29,30,30],2081:[31,32,31,32,31,30,30,30,29,30,29,31],
+2082:[31,31,32,31,31,31,30,29,30,29,30,30],2083:[31,31,32,31,31,31,30,29,30,29,30,30],
+2084:[31,31,32,31,31,30,30,30,29,30,30,30],2085:[31,32,31,32,30,31,30,30,29,30,30,30],
+2086:[30,32,31,32,31,30,30,30,29,30,30,30],2087:[31,31,32,31,31,31,30,30,29,30,30,30],
+2088:[30,31,32,32,30,31,30,30,29,30,30,30],2089:[30,32,31,32,31,30,30,30,29,30,30,30],
+2090:[30,32,31,32,31,30,30,30,29,30,30,30]};
+const pad=n=>String(n).padStart(2,'0');
+const ymd=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const parse=s=>{const[a,b,c]=s.split('-').map(Number);return new Date(a,b-1,c)};
+const addDays=(d,n)=>new Date(d.getFullYear(),d.getMonth(),d.getDate()+n);
+function adToBs(d){let n=Math.round((Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())-Date.UTC(2017,3,14))/864e5)+1;if(n<1)return null;for(let y=2074;BST[y];y++)for(let m=0;m<12;m++){const k=BST[y][m];if(n<=k)return{y,m:m+1,d:n};n-=k}return null}
+function bsToAd(y,m,d){let t=0;for(let i=2074;i<y;i++)t+=BST[i].reduce((a,b)=>a+b,0);for(let i=0;i<m-1;i++)t+=BST[y][i];return new Date(2017,3,14+t+d-1)}
+const HOL=[['Dashain holiday',[2083,6,31],[2083,7,6]],['Tihar holiday',[2083,7,22],[2083,7,26]]].map(([n,a,b])=>({n,a:bsToAd(...a),b:bsToAd(...b)}));
+function closed(d){const w=d.getDay();if(w===6)return'Saturday';if(w===0)return'Sunday';for(const h of HOL)if(+d>=+h.a&&+d<=+h.b)return h.n;return''}
+const fAD=d=>DAYS[d.getDay()].slice(0,3)+', '+d.getDate()+' '+MONS[d.getMonth()]+' '+d.getFullYear();
+const fBS=d=>{const b=adToBs(d);return b?BSM[b.m-1]+' '+b.d+', '+b.y+' BS':''};
+const CATS={
+'physics-assignment':{label:'Physics-Assignment',abbr:'PHY',c:'--c-phy'},
+'chemistry-assignment':{label:'Chemistry-Assignment',abbr:'CHEM',c:'--c-che'},
+'homework':{label:'Homework',abbr:'HW',c:'--c-hw'}};
+const ASG=[
+['pa-f2','physics-assignment','Physics F2 assignment',[5,3],'Mechanics Ch-2 Vectors, Ch-3 Kinematics up to Q.No.2; Heat Ch-10 Thermal Expansion; Electricity Ch-20 Electric Field.'],
+['pa-f3','physics-assignment','Physics F3 assignment',[6,7],'Mechanics Ch-3 Kinematics: Projectile (Q.Nos. 4, 5, 6 & 7); Additional Q: 1 to 10; Optics Ch-14 Reflection of Light; Electricity Ch-20 Electric Potential.'],
+['pa-f4','physics-assignment','Physics F4 assignment',[6,21],'Mechanics Ch-4 Dynamics; Optics Ch-15 Refraction; Electricity Ch-23 DC circuit (up to Q.No.5).'],
+['ca-f3','chemistry-assignment','Chemistry F3 assignment',[6,10],'Physical: Unit 3, Q.No. 1 to 5. Inorganic: Unit 17, Q.No. 5 & Unit 10, Q.No. 6. Organic: Unit 13, Q.No. 1, 2, 10.'],
+['ca-f4','chemistry-assignment','Chemistry F4 assignment',[6,25],'Physical: Unit 3, Q.No. 6 to 19. Inorganic: Unit 10, Q.No. 1 to 4. Organic: Unit 13, Q.No. 3, 4, 5, 11.'],
+['ca-f5','chemistry-assignment','Chemistry F5 assignment',[7,25],'Physical: Unit 6, Q.No. 1 to 12. Inorganic: Unit 17, Q.No. 4; Unit 9, Q.No. 1b, c, e, 5, 6, 8a, c, d. Organic: Unit 13, Q.No. 6, 7, 12, 13.']];
+const HW={
+Nepali:'6:8;7:10;8:2,22;9:20;10:6,27;11:18;12:23',
+English:'6:1,22;7:17;8:10;9:2;10:25;11:17;12:24',
+Physics:'6:5,19;7:11;8:3,18;9:3;10:4,21;11:5,19;12:25',
+Computer:'6:6,20;7:12;8:4,21;9:6;10:5,22;11:6,20;12:26',
+Math:'6:9,23;7:13;8:9,23;9:22;10:13,28;11:12,21;12:29',
+Chemistry:'6:12,26;7:16;8:11,24;9:23;10:14,29;11:13,23;12:30'};
+function seed(){
+ const raw=ASG.map(([id,category,title,bs,notes])=>({id,category,title,bs,notes}));
+ for(const s in HW)HW[s].split(';').forEach(p=>{const[m,ds]=p.split(':');ds.split(',').forEach(d=>raw.push({id:'hw-'+s+'-'+m+'-'+d,category:'homework',title:s+' homework',bs:[+m,+d],notes:''}))});
+ return raw.map(r=>{const sch=bsToAd(2083,r.bs[0],r.bs[1]);let a=sch;while(closed(a))a=addDays(a,1);
+  let notes=r.notes;if(+a!==+sch)notes=(notes?notes+' ':'')+'Originally scheduled '+fBS(sch).replace(' BS','')+' ('+closed(sch)+'), moved to the next working day.';
+  return{id:r.id,category:r.category,title:r.title,date:ymd(a),notes}});
+}
+//#DATA-END
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const badge=c=>`<span class="badge" style="--cc:var(${CATS[c].c})">${CATS[c].abbr}</span>`;
+const today=()=>{const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())};
+const tStr=()=>ymd(today()),tmrStr=()=>ymd(addDays(today(),1));
+const nowMins=()=>{const n=new Date();return n.getHours()*60+n.getMinutes()};
+const CLASS_START=6*60+20; // classes begin 6:20 AM
+const rel=s=>{const n=Math.round((parse(s)-today())/864e5);return n===0?'Due today':n===1?'Due tomorrow':n>1?'Due in '+n+' days':(-n)+(n===-1?' day':' days')+' ago'};
+
+const KEY='trinity_done_v1';
+let done={};
+try{const r=JSON.parse(localStorage.getItem(KEY));if(r&&typeof r==='object')done=r}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(done))}catch(e){}};
+const ITEMS=seed();
+
+function status(i){
+ if(done[i.id])return'done';
+ const t=tStr();
+ if(i.date<t||(i.date===t&&nowMins()>=CLASS_START))return'late';
+ return i.date===tmrStr()?'tmr':'soon';
+}
+const cls=s=>s==='done'||s==='late'||s==='tmr'?s:'';
+const stLabel=(i,s)=>s==='done'?'<span class="st-done">Completed</span>':s==='late'?'<span class="st-late">Incomplete</span> · '+rel(i.date):rel(i.date);
+const doneBtn=i=>`<button class="cbtn${done[i.id]?' on':''}" data-done="${i.id}">${done[i.id]?'✓ Completed':'Mark completed'}</button>`;
+const EGG=`<div class="egg" data-egg><span class="fl">🔥</span><span>Due today. If you're seeing this, you're probably <b>COOKED</b>. Good luck 😘</span><span class="fl">🔥</span></div>`;
+const showEgg=i=>i.date===tStr()&&!done[i.id]&&nowMins()<CLASS_START;
+
+function burst(){
+ if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+ const E=['🔥','🍳','💀','🔥','😵'];
+ for(let k=0;k<28;k++){const s=document.createElement('span');s.className='rain';s.textContent=E[k%E.length];
+  s.style.left=Math.random()*96+'vw';s.style.fontSize=(20+Math.random()*24)+'px';
+  s.style.animationDuration=(1.5+Math.random()*1.6)+'s';s.style.animationDelay=(Math.random()*.7)+'s';
+  document.body.appendChild(s);setTimeout(()=>s.remove(),4200)}
+ document.body.classList.add('shake');setTimeout(()=>document.body.classList.remove('shake'),450)}
+
+// ---------- top strip (with live clock), hero ----------
+function fmtTime(n){let h=n.getHours();const ap=h>=12?'PM':'AM';h=h%12||12;return h+':'+pad(n.getMinutes())+':'+pad(n.getSeconds())+' '+ap}
+function strip(){const t=today();$('#strip').innerHTML=`<span>Today: <b>${fAD(t)}</b></span><span><b>${fBS(t)}</b></span><span>Time: <b id="clock">${fmtTime(new Date())}</b></span>`}
+function hero(){const t=addDays(today(),1),n=ITEMS.filter(i=>i.date===ymd(t)&&!done[i.id]).length,c=closed(t);
+ $('#status').textContent=n?`${n} submission${n>1?'s':''} due tomorrow (${fAD(t)}).`:c?`No school tomorrow (${c}).`:'Nothing due tomorrow.'}
+
+// ---------- category list ----------
+const opts=Object.entries(CATS).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('');
+$('#cat').innerHTML='<option value="">Choose a category…</option>'+opts;
+let hist=false;
+function row(i){const d=parse(i.date),s=status(i);
+ return`<div class="due ${cls(s)}" data-d="${i.date}" tabindex="0" role="button">${badge(i.category)}<div><div class="tt">${esc(i.title)}</div><div class="meta">${fAD(d)} · ${fBS(d)}</div></div><div class="rt"><span>${stLabel(i,s)}</span>${doneBtn(i)}</div>${showEgg(i)?EGG:''}</div>`}
+let upN=2,dnN=2,upX=false,dnX=false;
+const moreRow=(side,shown,total,x)=>!x&&shown>=total?'':`<div class="morerow"><span class="edge-hint" aria-hidden="true">${side==='up'?'↑':'↓'}</span>${shown<total?`<button class="more" data-more="${side}">More ${side==='up'?'above':'below'}</button>`:''}${x&&shown<total?`<button class="more" data-all="${side}">Show all</button>`:''}${x?`<button class="more" data-hide="${side}">Hide ${side==='up'?'above':'below'}</button>`:''}</div>`;
+const todayBox=items=>items.length?`<div class="today-box" aria-label="Today's assignments"><strong>Today</strong><span>${items.map(i=>'Today was '+esc(i.title)).join(' · ')}</span></div>`:'';
+function list(){const k=$('#cat').value,box=$('#list'),hb=$('#hist');
+ if(!k){hb.textContent='Completion history';box.innerHTML='<p class="empty">Choose a category to see its due dates.</p>';return}
+ const all=ITEMS.filter(i=>i.category===k),t=tStr(),dn=all.filter(i=>done[i.id]);
+ hb.textContent=hist?'Back to due dates':'Completion history ('+dn.length+')';
+ if(hist){
+  const h=dn.sort((x,y)=>y.date.localeCompare(x.date)||x.title.localeCompare(y.title));
+  box.innerHTML=h.length?h.map(row).join(''):'<p class="empty">Nothing completed yet.</p>';return}
+ const a=all.filter(i=>!(done[i.id]&&i.date<t)).sort((x,y)=>x.date.localeCompare(y.date)||x.title.localeCompare(y.title));
+ if(!a.length){box.innerHTML='<p class="empty">Nothing pending.</p>';return}
+ const past=a.filter(i=>i.date<t),now=a.filter(i=>i.date===t),fut=a.filter(i=>i.date>t);
+ const pv=past.slice(Math.max(0,past.length-upN)),fv=fut.slice(0,dnN);
+ box.innerHTML=
+  moreRow('up',pv.length,past.length,upX)
+  +(past.length>pv.length?`<div class="fade-up">${pv.map(row).join('')}</div>`:pv.map(row).join(''))
+  +todayBox(now)
+  +(fut.length>fv.length?`<div class="fade-dn">${fv.map(row).join('')}</div>`:fv.map(row).join(''))
+  +moreRow('dn',fv.length,fut.length,dnX)}
+$('#cat').onchange=()=>{hist=false;upN=2;dnN=2;upX=false;dnX=false;list()};
+$('#hist').onclick=()=>{hist=!hist;list()};
+$('#list').addEventListener('click',e=>{
+ const m=e.target.closest('[data-more],[data-all],[data-hide]');if(!m)return;
+ const up=(m.dataset.more||m.dataset.all)==='up';
+ if(m.dataset.hide){if(up){upN=2;upX=false}else{dnN=2;dnX=false}}
+ else if(m.dataset.all){if(up)upN=1e9;else dnN=1e9}
+ else if(up){upN+=5;upX=true}else{dnN+=5;dnX=true}
+ list()});
+$('#list').addEventListener('click',e=>{if(e.target.closest('[data-done],[data-egg]'))return;const r=e.target.closest('.due');if(r)openDay(r.dataset.d)});
+$('#list').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.target.closest('button')){const r=e.target.closest('.due');if(r)openDay(r.dataset.d)}});
+function toggle(id){if(done[id])delete done[id];else done[id]=1;save();refresh();if(cur)openDay(cur)}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-done]');if(b){toggle(b.dataset.done);return}if(e.target.closest('[data-egg]'))burst()});
+
+// ---------- day details modal ----------
+let cur=null;
+function mrow(i){const s=status(i);
+ return`<div class="mi ${cls(s)}">${badge(i.category)}<div><b>${esc(i.title)}</b><div class="meta">${CATS[i.category].label} · ${stLabel(i,s)}</div>${i.notes?`<p>${esc(i.notes)}</p>`:''}${showEgg(i)?EGG:''}</div>${doneBtn(i)}</div>`}
+function openDay(iso){cur=iso;const d=parse(iso),cl=closed(d),l=ITEMS.filter(i=>i.date===iso);
+ $('#dayBody').innerHTML=`<h2>${fAD(d)}</h2><p class="sub">${fBS(d)||'BS date out of range'}</p>${cl?`<p class="note">School closed: ${cl}</p>`:''}`+(l.length?l.map(mrow).join(''):'<div class="empty-day"><p class="empty-main">Kesaiko Check Xaina!.</p><br><p class="empty-note">Have fun!</p><br><p class="empty-signoff">- Kallol Dahal</p></div>');
+ $('#ovDay').classList.add('open')}
+function closeAll(){cur=null;$('#ovDay').classList.remove('open')}
+$('#ovDay').addEventListener('click',e=>{if(e.target.id==='ovDay'||e.target.closest('[data-close]'))closeAll()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+$('#tomorrow').onclick=()=>openDay(tmrStr());
+$('#pick').onchange=e=>{if(e.target.value)openDay(e.target.value)};
+
+// ---------- calendar (AD / BS) ----------
+let mode='AD',vy=today().getFullYear(),vm=today().getMonth();
+$('#filters').innerHTML=Object.entries(CATS).map(([k,v])=>`<label style="--cc:var(${v.c})"><input type="checkbox" data-f="${k}" checked>${v.label}</label>`).join('');
+$('#filters').addEventListener('change',renderCal);
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>setMode(b.dataset.m));
+function setMode(m){if(m===mode)return;
+ const first=mode==='AD'?new Date(vy,vm,1):bsToAd(vy,vm,1),n=mode==='AD'?new Date(vy,vm+1,0).getDate():BST[vy][vm-1],t=today();
+ const a=(+t>=+first&&+t<=+addDays(first,n-1))?t:addDays(first,14);
+ if(m==='BS'){const b=adToBs(a)||adToBs(t);vy=b.y;vm=b.m}else{vy=a.getFullYear();vm=a.getMonth()}
+ mode=m;document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('on',x.dataset.m===m));renderCal()}
+function nav(k){const lo=mode==='AD'?0:1,hi=mode==='AD'?11:12;vm+=k;if(vm>hi){vm=lo;vy++}if(vm<lo){vm=hi;vy--}renderCal()}
+$('#prev').onclick=()=>nav(-1);$('#next').onclick=()=>nav(1);
+function otherRange(first,last){
+ if(mode==='AD'){const a=adToBs(first),b=adToBs(last);if(!a||!b)return'';return BSM[a.m-1]+(a.m!==b.m?' – '+BSM[b.m-1]:'')+' '+b.y+' BS'}
+ return MFULL[first.getMonth()]+(first.getMonth()!==last.getMonth()?' – '+MFULL[last.getMonth()]:'')+' '+last.getFullYear()+' AD'}
+function renderCal(){
+ const act=[...document.querySelectorAll('[data-f]:checked')].map(c=>c.dataset.f),by={};
+ ITEMS.filter(i=>act.includes(i.category)).forEach(i=>(by[i.date]=by[i.date]||[]).push(i));
+ let first,n,title;
+ if(mode==='AD'){first=new Date(vy,vm,1);n=new Date(vy,vm+1,0).getDate();title=MFULL[vm]+' '+vy}
+ else{first=bsToAd(vy,vm,1);n=BST[vy][vm-1];title=BSM[vm-1]+' '+vy+' BS'}
+ $('#ctitle').textContent=title;$('#csub').textContent=otherRange(first,addDays(first,n-1));
+ $('#prev').disabled=mode==='BS'&&vy===2074&&vm===1;$('#next').disabled=mode==='BS'&&vy===2090&&vm===12;
+ const t=today(),tm=tmrStr();
+ let h=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(x=>`<div class="wd">${x}</div>`).join('')+'<div></div>'.repeat((first.getDay()+6)%7);
+ for(let i=0;i<n;i++){const d=addDays(first,i),iso=ymd(d),cl=closed(d),l=by[iso]||[],b=adToBs(d);
+  const p=mode==='AD'?d.getDate():i+1,s=mode==='AD'?(b?b.d:''):d.getDate();
+  h+=`<button class="day${cl?' closed':''}${+d===+t?' today':''}${iso===tm&&l.length?' tmr':''}" data-d="${iso}" aria-label="${fAD(d)}${+d===+t?', today':''}${l.length?', '+l.length+' due':''}${cl?', school closed':''}"><span class="n">${p}</span><span class="s">${s}</span><span class="dots">${l.slice(0,4).map(x=>`<i class="${done[x.id]?'dn':''}" style="--cc:var(${CATS[x.category].c})"></i>`).join('')}${l.length>4?`<em>+${l.length-4}</em>`:''}</span></button>`}
+ $('#grid').innerHTML=h}
+$('#grid').addEventListener('click',e=>{const b=e.target.closest('.day');if(b)openDay(b.dataset.d)});
+
+// ---------- converter ----------
+function conv(){const v=$('#cIn').value,o=$('#cOut');if(!v){o.innerHTML='';return}
+ const d=parse(v),b=adToBs(d),c=closed(d);
+ o.innerHTML=b?`<div class="big">${BSM[b.m-1]} ${b.d}, ${b.y} BS</div><div class="meta">${DAYS[d.getDay()]}${c?' · school closed ('+c+')':''}</div>`:'<div class="meta">Outside the supported range.</div>'}
+$('#cIn').value=tStr();$('#cIn').oninput=conv;
+
+function refresh(){hero();list();renderCal()}
+const key=()=>tStr()+'|'+(nowMins()>=CLASS_START);
+let lastKey=key();
+setInterval(()=>{const c=$('#clock');if(c)c.textContent=fmtTime(new Date());
+ const k=key();if(k!==lastKey){lastKey=k;strip();refresh();if(cur)openDay(cur)}},1000);
+strip();conv();refresh();
+</script>
+</body>
+</html>
